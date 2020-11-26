@@ -35,7 +35,7 @@ class PermissionLivewire extends Component
      *
      * @var array
      */
-    public function rules() {
+    protected function rules() {
         return [
             'name' => 'required|unique:permissions,name,'.$this->permission_id,
             'description' => 'required',
