@@ -90,7 +90,7 @@ class PermissionLivewire extends Component
      */
     public function add_permission()
     {
-        if (Auth::user()->user_info->cannot("add-permission")) {
+        if (Auth::user()->bfo_info->cannot("add-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
@@ -110,7 +110,7 @@ class PermissionLivewire extends Component
      */
     public function edit_permission($id)
     {
-        if (Auth::user()->user_info->cannot("edit-permission")) {
+        if (Auth::user()->bfo_info->cannot("edit-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             $this->reset();
             return null;
@@ -143,7 +143,7 @@ class PermissionLivewire extends Component
      */
     public function save()
     {
-        if (!Auth::user()->user_info->canAny(["add-permission", "edit-permission"])) {
+        if (!Auth::user()->bfo_info->canAny(["add-permission", "edit-permission"])) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
@@ -187,7 +187,7 @@ class PermissionLivewire extends Component
      */
     public function delete_permission($id)
     {
-        if (Auth::user()->user_info->cannot("delete-permission")) {
+        if (Auth::user()->bfo_info->cannot("delete-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             $this->reset();
             return null;
@@ -218,7 +218,7 @@ class PermissionLivewire extends Component
      */
     public function delete()
     {
-        if (Auth::user()->user_info->cannot("delete-permission")) {
+        if (Auth::user()->bfo_info->cannot("delete-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
