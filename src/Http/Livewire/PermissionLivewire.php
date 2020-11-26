@@ -36,7 +36,7 @@ class PermissionLivewire extends Component
      * @var array
      */
     protected $rules = [
-        'name' => 'required|unique:lrv_permissions,name',
+        'name' => 'required|unique:permissions,name',
         'description' => 'required',
         'group' => 'nullable',
         'order' => 'required|numeric|min:0',
