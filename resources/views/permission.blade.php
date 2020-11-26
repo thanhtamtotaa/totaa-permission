@@ -20,7 +20,7 @@
     <div class="card">
 
 
-        @livewire('permission-livewire')
+        @livewire('totaa-permission::permission-livewire')
 
         <div class="card-datatable table-responsive pt-2">
             {{$dataTable->table(["totaa-datatables", "class" => "table table-striped table-bordered", "width" => "100%"])}}
