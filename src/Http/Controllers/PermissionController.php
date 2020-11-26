@@ -4,7 +4,7 @@ namespace Totaa\TotaaPermission\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use Totaa\TotaaPermission\DataTables\AdminPermissionDataTable;
 class PermissionController extends Controller
 {
     /**
