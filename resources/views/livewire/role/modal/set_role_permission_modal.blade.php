@@ -46,7 +46,7 @@
 
                                                 @foreach ($value as $permission)
                                                     <label class="form-check col-md-4 col-sm-6 col-12 mb-1">
-                                                        <input class="form-check-input ml-0 mt-1" wire:model="permissions.{{ $permission->id }}" type="checkbox" value="{{ $permission->name }}">
+                                                        <input class="form-check-input ml-0 mt-1" wire:model="permissions.{{ $permission->name }}" type="checkbox" value="{{ $permission->id }}">
                                                         <span class="form-check-label ml-4">{{ $permission->description }}</span>
                                                     </label>
                                                 @endforeach
@@ -61,6 +61,8 @@
                     </form>
                 </div>
             </div>
+
+            <pre>{{ var_dump($permissions) }}</pre>
 
             <div class="modal-footer mx-auto">
                 <button wire:click.prevent="cancel()" class="btn btn-danger" wire:loading.attr="disabled" data-dismiss="modal">Đóng</button>
