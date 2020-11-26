@@ -73,6 +73,7 @@ class TotaaPermissionServiceProvider extends ServiceProvider
 
         if (class_exists(Livewire::class)) {
             Livewire::component('totaa-permission::permission-livewire', PermissionLivewire::class);
+            Livewire::component('totaa-permission::role-livewire', RoleLivewire::class);
         }
     }
 }
