@@ -37,7 +37,7 @@ class PermissionLivewire extends Component
      */
     protected function rules() {
         return [
-            'name' => 'required|unique:permissions,name,'.$this->permission_id,
+            'name' => 'required|not_regex:/^[0-9]*$/|unique:permissions,name,'.$this->permission_id,
             'description' => 'required',
             'group' => 'nullable',
             'order' => 'required|numeric|min:0',
