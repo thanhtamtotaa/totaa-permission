@@ -13,7 +13,7 @@ class PermissionLivewire extends Component
      *
      * @var mixed
      */
-    public $name, $description, $group, $order, $permission_id;
+    public $name, $description, $group, $order, $permission_id = NULL;
     public $name_arrays, $modal_title;
 
     /**
@@ -37,7 +37,7 @@ class PermissionLivewire extends Component
      */
     public function rules() {
         return [
-            'name' => 'required|unique:permissions,name,'.$this->$permission_id,
+            'name' => 'required|unique:permissions,name,'.$this->permission_id,
             'description' => 'required',
             'group' => 'nullable',
             'order' => 'required|numeric|min:0',
