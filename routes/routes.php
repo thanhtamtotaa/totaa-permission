@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Totaa\TotaaPermission\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +24,7 @@ Route::middleware(['web', 'auth', 'CheckAccount'])->group(function () {
         Route::redirect('permission', '/', 301);
         Route::group(['prefix' => 'permission'], function () {
 
-            Route::get('role',  function () {
-                dd(Auth::user()->bfo_info);
-                dd(321321);
-            })->name('admin.permission.role');
-
+            Route::get('role',  [PermissionController::class, 'index'])->name('admin.permission.role');
 
         });
 
