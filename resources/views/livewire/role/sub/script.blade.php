@@ -27,25 +27,25 @@
 
     //Block UI khi ấn thêm mới
     Livewire.on('add_role', function() {
-        Customize_BlockUI();
+        ToTaa_BlockUI();
     });
 
     //Gọi view edit role
-    $(document).on("click", "[customize-edit-role]", function() {
-        Customize_BlockUI();
-        Livewire.emit('edit_role', $(this).attr("customize-edit-role"));
+    $(document).on("click", "[totaa-edit-role]", function() {
+        ToTaa_BlockUI();
+        Livewire.emit('edit_role', $(this).attr("totaa-edit-role"));
     });
 
     //Gọi view set-role-permission
-    $(document).on("click", "[customize-set-role-permission]", function() {
-        Customize_BlockUI();
-        Livewire.emit('set_role_permission', $(this).attr("customize-set-role-permission"));
+    $(document).on("click", "[totaa-set-role-permission]", function() {
+        ToTaa_BlockUI();
+        Livewire.emit('set_role_permission', $(this).attr("totaa-set-role-permission"));
     });
 
     //Gọi view xác nhận xóa
-    $(document).on("click", "[customize-delete-role]", function() {
-        Customize_BlockUI();
-        Livewire.emit('delete_role', $(this).attr("customize-delete-role"));
+    $(document).on("click", "[totaa-delete-role]", function() {
+        ToTaa_BlockUI();
+        Livewire.emit('delete_role', $(this).attr("totaa-delete-role"));
     });
 
     //Xử lý khi dữ liệu đã được load xong
@@ -53,13 +53,13 @@
         Livewire.hook("message.processed", (message, component) => {
             $.unblockUI();
 
-            if ($("select.select2-customize").length != 0) {
-                $("select.select2-customize").each(function(e) {
+            if ($("select.select2-totaa").length != 0) {
+                $("select.select2-totaa").each(function(e) {
                     $(this)
                         .wrap('<div class="position-relative"></div>')
                         .select2({
-                            placeholder: $(this).attr("customize-placeholder"),
-                            minimumResultsForSearch: $(this).attr("customize-search"),
+                            placeholder: $(this).attr("totaa-placeholder"),
+                            minimumResultsForSearch: $(this).attr("totaa-search"),
                             dropdownParent: $("#" + $(this).attr("id") + "_div"),
                         })
                         .change(function(e) {
@@ -68,8 +68,8 @@
                 });
             }
 
-            if ($("input.datetimepicker-customize").length != 0) {
-                $("input.datetimepicker-customize").each(function(e) {
+            if ($("input.datetimepicker-totaa").length != 0) {
+                $("input.datetimepicker-totaa").each(function(e) {
                     $(this)
                         .datetimepicker({
                             format: "dd-mm-yyyy hh:ii",
