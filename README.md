@@ -17,13 +17,13 @@ composer require totaa/totaa-permission
 
 ## Usage
 
-``` php
-// Usage description here
+```php
+php artisan vendor:publish --provider="Totaa\TotaaPermission\TotaaPermissionServiceProvider"
 ```
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -41,8 +41,8 @@ If you discover any security related issues, please email thanhtamtotaa@gmail.co
 
 ## Credits
 
-- [Tho Thanh Tâm](https://github.com/totaa)
-- [All Contributors](../../contributors)
+-   [Tho Thanh Tâm](https://github.com/totaa)
+-   [All Contributors](../../contributors)
 
 ## License
 
