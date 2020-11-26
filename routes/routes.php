@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth', 'CheckAccount'])->group(function () {
+Route::middleware(['web', 'auth', 'CheckAccount'])->group(function () {
 
     //Route Admin
     Route::redirect('admin', '/', 301);
