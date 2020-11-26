@@ -24,6 +24,10 @@ class TotaaPermissionServiceProvider extends ServiceProvider
                 __DIR__.'/../config/permission.php' => config_path('permission.php'),
             ], 'config');
 
+            $this->publishes([
+                __DIR__.'/../database/migrations/2020_11_17_091443_create_permission_tables.php' => databasePath('2020_11_17_091443_create_permission_tables.php'),
+            ], 'migrations');
+
             // Publishing the views.
             /*$this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/totaa-permission'),
