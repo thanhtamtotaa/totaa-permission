@@ -62,8 +62,6 @@
                 </div>
             </div>
 
-            <pre>{{ var_dump($permissions) }}</pre>
-
             <div class="modal-footer mx-auto">
                 <button wire:click.prevent="cancel()" class="btn btn-danger" wire:loading.attr="disabled" data-dismiss="modal">Đóng</button>
                 <button wire:click.prevent="save_role_permission()" class="btn btn-success" wire:loading.attr="disabled">Xác nhận</button>
