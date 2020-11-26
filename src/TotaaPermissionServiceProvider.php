@@ -21,7 +21,6 @@ class TotaaPermissionServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('totaa-permission.php'),
                 __DIR__.'/../config/permission.php' => config_path('permission.php'),
             ], 'config');
 
