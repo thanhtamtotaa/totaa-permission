@@ -97,7 +97,7 @@ class RoleLivewire extends Component
      */
     public function add_role()
     {
-        if (Auth::user()->user_info->cannot("add-role")) {
+        if (Auth::user()->bfo_info->cannot("add-role")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
@@ -117,7 +117,7 @@ class RoleLivewire extends Component
      */
     public function edit_role($id)
     {
-        if (Auth::user()->user_info->cannot("edit-role")) {
+        if (Auth::user()->bfo_info->cannot("edit-role")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             $this->reset();
             return null;
@@ -150,7 +150,7 @@ class RoleLivewire extends Component
      */
     public function save()
     {
-        if (!Auth::user()->user_info->canAny(["add-role", "edit-role"])) {
+        if (!Auth::user()->bfo_info->canAny(["add-role", "edit-role"])) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
@@ -194,7 +194,7 @@ class RoleLivewire extends Component
      */
     public function delete_role($id)
     {
-        if (Auth::user()->user_info->cannot("delete-role")) {
+        if (Auth::user()->bfo_info->cannot("delete-role")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             $this->reset();
             return null;
@@ -225,7 +225,7 @@ class RoleLivewire extends Component
      */
     public function delete()
     {
-        if (Auth::user()->user_info->cannot("delete-role")) {
+        if (Auth::user()->bfo_info->cannot("delete-role")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
@@ -254,7 +254,7 @@ class RoleLivewire extends Component
      */
     public function set_role_permission($id)
     {
-        if (Auth::user()->user_info->cannot("set-role-permission")) {
+        if (Auth::user()->bfo_info->cannot("set-role-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             $this->reset();
             return null;
@@ -278,7 +278,7 @@ class RoleLivewire extends Component
      */
     public function save_role_permission()
     {
-        if (Auth::user()->user_info->cannot("set-role-permission")) {
+        if (Auth::user()->bfo_info->cannot("set-role-permission")) {
             $this->dispatchBrowserEvent('toastr', ['type' => 'warning', 'title' => "Thất bại", 'message' => "Bạn không có quyền thực hiện hành động này"]);
             return null;
         }
