@@ -265,8 +265,7 @@ class RoleLivewire extends Component
         $this->description = $role->description;
         $this->group = $role->group;
         $this->updateMode = true;
-
-        $this->permissions = $role->permissions()->pluck("name", "id")->toArray();
+        $this->permissions =  $role->permissions()->select("name", "id")->pluck("id", "name")->toArray();
 
         $this->dispatchBrowserEvent('show_modal', "#set_role_permission_modal");
     }
