@@ -1,14 +1,14 @@
 <div>
     <!-- Filters and Add Buttons -->
-    @include('livewire.admin.role.sub.filters')
+    @include('totaa-permission::livewire.role.sub.filters')
 
     <!-- Incluce các modal -->
-    @include('livewire.admin.role.modal.add_edit')
-    @include('livewire.admin.role.modal.delete_modal')
-    @include('livewire.admin.role.modal.set_role_permission_modal')
+    @include('totaa-permission::livewire.role.modal.add_edit')
+    @include('totaa-permission::livewire.role.modal.delete_modal')
+    @include('totaa-permission::livewire.role.modal.set_role_permission_modal')
 
     <!-- Scripts -->
     @push('livewires')
-        @include('livewire.admin.role.sub.script')
+        @include('totaa-permission::livewire.role.sub.script')
     @endpush
 </div>
