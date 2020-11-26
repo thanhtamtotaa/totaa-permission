@@ -37,7 +37,7 @@ class RoleLivewire extends Component
      */
     protected function rules() {
         return [
-            'name' => 'required|unique:roles,name,'.$this->role_id,
+            'name' => 'required|not_regex:/^[0-9]*$/|unique:roles,name,'.$this->role_id,
             'description' => 'required',
             'group' => 'nullable',
             'order' => 'required|numeric|min:0',
