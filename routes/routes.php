@@ -24,7 +24,7 @@ Route::middleware(['web', 'auth', 'CheckAccount'])->group(function () {
         Route::group(['prefix' => 'permission'], function () {
 
             Route::get('role',  function () {
-                dd(Auth::user());
+                dd(Auth::user()->bfo_info);
                 dd(321321);
             })->name('admin.permission.role');
 
