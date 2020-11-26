@@ -28,7 +28,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Totaa\\TotaaPermission\\": "src"
+            "Totaa\\TotaaPermission\\": "src",
+            "Totaa\\TotaaPermission\\Database\\Seeders\\": "database/seeders"
         }
     },
     "autoload-dev": {
