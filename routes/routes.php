@@ -24,6 +24,8 @@ Route::middleware(['web', 'auth', 'CheckAccount'])->group(function () {
         Route::redirect('permission', '/', 301);
         Route::group(['prefix' => 'permission'], function () {
 
+            Route::get('role',  [RoleController::class, 'index'])->name('admin.permission.role');
+
             Route::get('permission',  [PermissionController::class, 'index'])->name('admin.permission.permission');
 
         });
