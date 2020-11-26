@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Totaa\TotaaPermission\Http\Controllers\PermissionController;
+use Totaa\TotaaPermission\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
