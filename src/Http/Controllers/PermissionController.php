@@ -14,7 +14,7 @@ class PermissionController extends Controller
      */
     public function index(AdminPermissionDataTable $dataTable)
     {
-        if (Auth::user()->user_info->hasAnyPermission(["view-permission"])) {
+        if (Auth::user()->bfo_info->hasAnyPermission(["view-permission"])) {
             return $dataTable->render('totaa-permission::permission', ['title' => 'Quản lý Permission']);
         } else {
             return view('errors.dynamic', [
