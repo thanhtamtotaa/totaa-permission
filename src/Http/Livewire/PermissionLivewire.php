@@ -35,12 +35,14 @@ class PermissionLivewire extends Component
      *
      * @var array
      */
-    protected $rules = [
-        'name' => 'required|unique:permissions,name',
-        'description' => 'required',
-        'group' => 'nullable',
-        'order' => 'required|numeric|min:0',
-    ];
+    public function rules() {
+        return [
+            'name' => 'required|unique:permissions,name,'.$this->$permission_id,
+            'description' => 'required',
+            'group' => 'nullable',
+            'order' => 'required|numeric|min:0',
+        ];
+    }
 
     public function render()
     {
