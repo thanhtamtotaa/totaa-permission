@@ -25,11 +25,11 @@ class AdminPermissionDataTable extends DataTable
             ->addColumn('action', function ($query) {
                 $Action_Icon="<div class='action-div icon-4 px-0 mx-1 d-flex justify-content-around text-center'>";
 
-                if (Auth::user()->user_info->can("edit-permission")) {
+                if (Auth::user()->bfo_info->can("edit-permission")) {
                     $Action_Icon.="<div class='col-3 action-w-50 action-btn' customize-edit-permission='$query->id'><i class='text-indigo fas fa-edit'></i></div>";
                 }
 
-                if (Auth::user()->user_info->can("delete-permission")) {
+                if (Auth::user()->bfo_info->can("delete-permission")) {
                     $Action_Icon.="<div class='col-3 action-w-50 action-btn' customize-delete-permission='$query->id'><i class='text-danger fas fa-trash-alt'></i></div>";
                 }
 
