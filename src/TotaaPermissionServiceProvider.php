@@ -3,6 +3,8 @@
 namespace Totaa\TotaaPermission;
 
 use Illuminate\Support\ServiceProvider;
+use Totaa\TotaaPermission\Http\Livewire\PermissionLivewire;
+use Livewire\Livewire;
 
 class TotaaPermissionServiceProvider extends ServiceProvider
 {
@@ -68,5 +70,9 @@ class TotaaPermissionServiceProvider extends ServiceProvider
         $this->app->singleton('totaa-permission', function () {
             return new TotaaPermission;
         });
+
+        if (class_exists(Livewire::class)) {
+            Livewire::component('totaa-permission::livewire.permission-livewire', PermissionLivewire::class);
+        }
     }
 }
