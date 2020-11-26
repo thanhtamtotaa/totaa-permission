@@ -4,6 +4,7 @@ namespace Totaa\TotaaPermission;
 
 use Illuminate\Support\ServiceProvider;
 use Totaa\TotaaPermission\Http\Livewire\PermissionLivewire;
+use Totaa\TotaaPermission\Http\Livewire\RoleLivewire;
 use Livewire\Livewire;
 
 class TotaaPermissionServiceProvider extends ServiceProvider
