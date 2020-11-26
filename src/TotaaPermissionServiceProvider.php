@@ -45,6 +45,14 @@ class TotaaPermissionServiceProvider extends ServiceProvider
 
             // Registering package commands.
             // $this->commands([]);
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Seed Service Provider need on boot() method
+            |--------------------------------------------------------------------------
+            */
+            $this->app->register(SeedServiceProvider::class);
         }
     }
 
