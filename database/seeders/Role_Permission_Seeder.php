@@ -81,7 +81,7 @@ class Role_Permission_Seeder extends Seeder
             $admin = Role::where("name", "admin")->first();
         }
 
-        $super_admin->syncPermissions($permission);
-        $admin->syncPermissions($permission);
+        $super_admin->givePermissionTo($permission);
+        $admin->givePermissionTo($permission);
     }
 }
