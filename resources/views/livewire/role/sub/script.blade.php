@@ -56,12 +56,12 @@
             if ($("select.select2-totaa").length != 0) {
                 $("select.select2-totaa").each(function(e) {
                     $(this)
-                    .wrap('<div class="position-relative"></div>')
-                    .select2({
-                        placeholder: $(this).attr("totaa-placeholder"),
-                        minimumResultsForSearch: $(this).attr("totaa-search"),
-                        dropdownParent: $("#" + $(this).attr("id") + "_div"),
-                    });
+                        .wrap('<div class="position-relative"></div>')
+                        .select2({
+                            placeholder: $(this).attr("totaa-placeholder"),
+                            minimumResultsForSearch: $(this).attr("totaa-search"),
+                            dropdownParent: $("#" + $(this).attr("id") + "_div"),
+                        });
                 });
             }
 
