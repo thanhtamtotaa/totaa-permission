@@ -14,7 +14,7 @@
                     <div class="row">
 
                         <div class="col-12 mb-3 text-danger font-weight-semibold">
-                            Bạn sẽ bản đăng ký lịch công tác có thông tin như sau, việc xóa là KHÔNG THỂ khôi phục,bạn có chắc chắn?
+                           Việc xóa Permission là KHÔNG THỂ khôi phục,bạn có chắc chắn?
                         </div>
 
                         <div class="col-12">
